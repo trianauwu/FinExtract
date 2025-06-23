@@ -79,13 +79,11 @@ Es altamente recomendado usar entornos virtuales para aislar las dependencias de
 a. Para el Microservicio de Henderson (henderson_microservice)
 #### 1. Navegar al directorio:
 
-```cd henderson_microservice
-```
+```cd henderson_microservice```
 
 #### 2. Crear el entorno virtual:
 
-```python -m venv venv
-```
+```python -m venv venv```
 #### 3. Activar el entorno virtual:
 
 ``` # En Windows (CMD/PowerShell):
