@@ -76,64 +76,84 @@ Dentro del directorio extractors_sft/, asegúrate de que existan las carpetas da
 ### 3. Configurar Entornos Virtuales e Instalar Dependencias Python
 Es altamente recomendado usar entornos virtuales para aislar las dependencias de cada módulo.
 
-a. Para el Microservicio de Henderson (henderson_microservice)
-#### 1. Navegar al directorio:
+#### a. Para el Microservicio de Henderson (henderson_microservice)
+##### 1. Navegar al directorio:
 
-```cd henderson_microservice```
+```# En Windows (CMD/PowerShell):
+cd henderson_microservice
+```
 
-#### 2. Crear el entorno virtual:
+##### 2. Crear el entorno virtual:
 
-```python -m venv venv```
+```# En Windows (CMD/PowerShell): 
+python -m venv venv
+```
 
-#### 3. Activar el entorno virtual:
+##### 3. Activar el entorno virtual:
 
 ``` # En Windows (CMD/PowerShell):
 .\venv\Scripts\activate.bat
 ```
-#### 4. Instalar dependencias:
+##### 4. Instalar dependencias:
 
-```pip install -r requirements.txt```
+```# En Windows (CMD/PowerShell):
+pip install -r requirements.txt
+```
 
-#### 5. Desactivar el entorno virtual:
+##### 5. Desactivar el entorno virtual:
 
-```deactivate```
+```# En Windows (CMD/PowerShell):
+deactivate
+```
 
-#### Volver a la raíz del proyecto:
+##### 6. Volver a la raíz del proyecto:
 
-```cd ..```
+```# En Windows (CMD/PowerShell):
+cd ..
+```
 
-b. Para los Servicios de Extracción SFT (extractors_sft, incluyendo GUI/Main/Local Processor)
-#### 1. Navegar al directorio:
+#### b. Para los Servicios de Extracción SFT (extractors_sft, incluyendo GUI/Main/Local Processor)
+##### 1. Navegar al directorio:
 
-```cd extractors_sft```
+```# En Windows (CMD/PowerShell):
+cd extractors_sft
+```
 
-#### 2. Crear el entorno virtual:
+##### 2. Crear el entorno virtual:
 
-```python -m venv venv```
+```# En Windows (CMD/PowerShell):
+python -m venv venv
+```
 
-#### 3. Activar el entorno virtual:
+##### 3. Activar el entorno virtual:
 
 ```# En Windows (CMD/PowerShell):
 .\venv\Scripts\activate.bat
 ```
 
-#### 4. Instalar dependencias:
+##### 4. Instalar dependencias:
 
-```pip install -r requirements.txt```
+```# En Windows (CMD/PowerShell):
+pip install -r requirements.txt
+```
 
-#### 5. Desactivar el entorno virtual:
+##### 5. Desactivar el entorno virtual:
 
-```deactivate```
+```# En Windows (CMD/PowerShell):
+deactivate
+```
 
-#### 6. Volver a la raíz del proyecto:
+##### 6. Volver a la raíz del proyecto:
 
-```cd ..```
+```# En Windows (CMD/PowerShell):
+cd ..
+```
 
-## 4. Instalar y Configurar Servicios Externos
-### a. RabbitMQ
+### 4. Instalar y Configurar Servicios Externos
+#### a. RabbitMQ
 Necesitas un servidor RabbitMQ ejecutándose localmente.
 
-#### Opción 1: Instalación Nativa (Recomendado para producción local)
+##### Opción 1: Instalación Nativa (Recomendado para producción local)
 
 Descarga e instala Erlang (requisito previo para RabbitMQ).
 Descarga e instala RabbitMQ Server para Windows.
@@ -141,7 +161,7 @@ Asegúrate de que el servicio de RabbitMQ esté iniciado (puedes verificar en se
 Habilita el plugin de gestión para la interfaz web y métricas (en una terminal de administrador, navega al directorio sbin de tu instalación de RabbitMQ y ejecuta rabbitmq-plugins enable rabbitmq_management).
 Debería estar accesible en http://localhost:15672 (usuario/pass: guest/guest).
 
-#### Opción 2: Usar Docker para RabbitMQ (Más Rápido para desarrollo)
+##### Opción 2: Usar Docker para RabbitMQ (Más Rápido para desarrollo)
 
 Asegúrate de tener Docker Desktop instalado y funcionando.
 Abre una terminal (PowerShell o CMD) y ejecuta:
@@ -150,7 +170,7 @@ Abre una terminal (PowerShell o CMD) y ejecuta:
 ```
 Este contenedor se iniciará en segundo plano. Puedes verificar su estado con docker ps.
 
-### b. Prometheus
+#### b. Prometheus
 Descarga el ejecutable de Prometheus Server para Windows:
 
 Ve a https://prometheus.io/download/ y descarga la versión windows-amd64.zip.
@@ -189,42 +209,42 @@ scrape_configs:
         labels:
           application: main
 ```
-## c. Grafana
-### Descarga el instalador de Grafana para Windows:
+#### c. Grafana
+##### Descarga el instalador de Grafana para Windows:
 Ve a https://grafana.com/grafana/download/ y descarga el instalador .msi para Windows.
 
-### Instala Grafana:
+##### Instala Grafana:
 Ejecuta el instalador. Grafana se instalará como un Servicio de Windows.
 Una vez instalado, asegúrate de que el servicio de Grafana esté iniciado a través del Administrador de Tareas (pestaña "Servicios") o la aplicación "Servicios" (services.msc).
 
-### Configurar Prometheus como Fuente de Datos en Grafana (una vez en el navegador):
+##### Configurar Prometheus como Fuente de Datos en Grafana (una vez en el navegador):
 Abre http://localhost:3000 en tu navegador (usuario/contraseña por defecto: admin/admin - se pedirá cambiarla en el primer inicio de sesión).
 Ve a "Connections" -> "Data sources" -> "Add new data source" y selecciona "Prometheus".
 En el campo "URL", ingresa http://localhost:9090 (la dirección de tu Prometheus local).
 Haz clic en "Save & test".
 
-## 5. Ejecutar los Servicios del Proyecto FinExtract
+### 5. Ejecutar los Servicios del Proyecto FinExtract
 Abre cuatro terminales separadas (CMD o PowerShell) para ejecutar cada componente Python y Prometheus. Grafana se ejecuta como un servicio de Windows.
 
-### Terminal 1: Microservicio de Henderson (app_h.py)
+#### Terminal 1: Microservicio de Henderson (app_h.py)
 
 ```cd henderson_microservice
 .\venv\Scripts\activate.bat
 python app_h.py
 ```
 
-### Terminal 2: Servicio de Procesamiento Local (local_processor_service.py)
+#### Terminal 2: Servicio de Procesamiento Local (local_processor_service.py)
 
 ```cd extractors_sft
 .\venv\Scripts\activate.bat
 python src\local_processor_service.py
 ```
-### Terminal 3: Servidor Prometheus
+#### Terminal 3: Servidor Prometheus
 
 ```cd tools\prometheus
 .\prometheus.exe --config.file=prometheus.yml
 ```
-### Terminal 4: Aplicación GUI (gui.py)
+#### Terminal 4: Aplicación GUI (gui.py)
 
 ```cd extractors_sft
 .\venv\Scripts\activate.bat
