@@ -1,12 +1,12 @@
-# 📊 FinExtract – Sistema de Procesamiento de Documentos PDF
+# FinExtract – Sistema de Procesamiento de Documentos PDF
 
 **Autores:** Marina Ramos, Mikela Scotti, Arturo Cornes, Erika Puhl y Triana Correa 
 
-## ✨ Visión General del Proyecto
+## Visión General del Proyecto
 
 FinExtract es una robusta aplicación de escritorio diseñada para automatizar la extracción, transformación, validación y reporte de datos financieros de documentos PDF de diversos proveedores. Su objetivo principal es optimizar la gestión de datos, reducir la carga de trabajo manual y garantizar la precisión en el procesamiento de información crítica para Grupo Cepas.
 
-### 🚀 Características Principales
+### Características Principales
 
 * **Extracción Multi-Proveedor:** Soporte para extracción de datos de PDFs de Henderson, Polakof, Tata, Macro, Ussel, Bowerey y GDU.
 * **Procesamiento Híbrido:**
@@ -18,7 +18,7 @@ FinExtract es una robusta aplicación de escritorio diseñada para automatizar l
 * **Monitoreo de Operaciones:** Exposición de métricas de rendimiento a través de Prometheus para una supervisión detallada de la aplicación y sus componentes.
 * **Notificaciones de Estado:** Actualizaciones en tiempo real sobre el progreso y el estado de los procesos de extracción y generación de archivos.
 
-## 📦 Arquitectura del Sistema (Ejecución Local)
+## Arquitectura del Sistema (Ejecución Local)
 
 El proyecto FinExtract está compuesto por varios módulos interconectados, diseñados para ejecutarse localmente en tu sistema operativo Windows:
 
@@ -58,7 +58,7 @@ El proyecto FinExtract está compuesto por varios módulos interconectados, dise
 │       └── bin/grafana.exe
 └── .gitignore                    # Archivo para ignorar directorios y archivos en Git
 ```
-## 🚀 Guía de Configuración y Ejecución Local
+## Guía de Configuración y Ejecución Local
 
 Sigue estos pasos detallados para poner en marcha el proyecto FinExtract en tu máquina local.
 
