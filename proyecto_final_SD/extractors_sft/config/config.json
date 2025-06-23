@@ -1,0 +1,58 @@
+{
+  "rules": [
+    {
+      "name": "polakof",
+      "extractor": "extract_polakof",
+      "keywords": ["polakof"],
+      "all": true
+    },
+    {
+      "name": "macro_ops",
+      "extractor": "extract_ops_macro",
+      "keywords": ["detalle de pago", "facturas proveedor", "a7"],
+      "all": false
+    },
+    {
+      "name": "ussel_ops",
+      "extractor": "extract_ops_ussel",
+      "keywords": ["estimado proveedor", "orden nº", "fac nº"],
+      "all": true
+    },
+    {
+      "name": "bowerey",
+      "extractor": "extract_bowerey",
+      "keywords": ["Bowerey"],
+      "all": true
+    },
+    {
+      "name": "ussel_res",
+      "extractor": "extract_res_ussel",
+      "keywords": ["e-resguardo", "obligaciones tributarias", "dto. 134/2009"],
+      "all": true
+    },
+    {
+      "name": "tata",
+      "extractor": "extract_tata",
+      "keywords": ["tata s.a."],
+      "all": true
+    },
+    {
+      "name": "gdu",
+      "extractor": "extract_GDU",
+      "keywords": ["liquidacion", "total pagos"],
+      "all": true
+    },
+    {
+      "name": "henderson",
+      "extractor": "extract_henderson",
+      "keywords": ["magma wis"],
+      "all": true
+    },
+    {
+      "name": "macro_res",
+      "extractor": "extract_res_macro",
+      "keywords": ["resguardo", "cfe"],
+      "all": true
+    }
+  ]
+}
