@@ -1,7 +1,6 @@
 # 📊 FinExtract – Sistema de Procesamiento de Documentos PDF
 
-**Autores:** Marina Ramos, Mikela Scotti, Arturo Cornes, Erika Puhl y Triana Correa
-**Versión:** 2.0 (Local-First)
+**Autores:** Marina Ramos, Mikela Scotti, Arturo Cornes, Erika Puhl y Triana Correa **Versión:** 2.0 (Local-First)
 
 ## ✨ Visión General del Proyecto
 
