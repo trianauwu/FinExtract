@@ -34,3 +34,47 @@ El proyecto FinExtract está compuesto por varios módulos interconectados, dise
 * **Grafana:** Una plataforma de visualización que se conecta a Prometheus para crear dashboards interactivos con las métricas del sistema.
 
 ### Estructura de Carpetas
+FinExtract/
+├── henderson_microservice/       # Microservicio Flask para Henderson
+│   ├── app_h.py                  # Lógica del servidor Flask
+│   └── requirements.txt          # Dependencias de Python para Henderson
+├── extractors_sft/               # Módulo principal de Extractores SFT
+│   ├── GUI/                      # Archivos de la interfaz gráfica (gui.py, logo_cepas.png)
+│   │   └── gui.py
+│   ├── config/                   # Archivos de configuración (config.json)
+│   │   └── config.json
+│   ├── data/                     # Carpeta para colocar PDFs de entrada (¡crear si no existe!)
+│   ├── output/                   # Carpeta donde se guardarán los Excels y validaciones (¡crear si no existe!)
+│   ├── src/                      # Código fuente de los extractores, transformadores, etc.
+│   │   ├── main.py               # Orquestador principal y encolador
+│   │   ├── local_processor_service.py # Consumidor de RabbitMQ para procesamiento asíncrono
+│   │   ├── extractor_polakof.py
+│   │   ├── ... (otros extractores)
+│   │   └── (otros módulos: transformer.py, excel_generator.py, validator.py, logger.py)
+│   └── requirements.txt          # Dependencias de Python para extractores SFT y GUI
+├── tools/                        # Herramientas y ejecutables externos
+│   ├── prometheus/               # Ejecutable y configuración de Prometheus Server
+│   │   ├── prometheus.exe
+│   │   └── prometheus.yml        # Archivo de configuración de Prometheus
+│   └── grafana/                  # Ejecutable de Grafana (si no se instaló como servicio)
+│       └── bin/grafana.exe
+└── .gitignore                    # Archivo para ignorar directorios y archivos en Git
+
+## 🚀 Guía de Configuración y Ejecución Local
+
+Sigue estos pasos detallados para poner en marcha el proyecto FinExtract en tu máquina local.
+
+### 1. Clonar el Repositorio
+
+Abre tu terminal (PowerShell o CMD) y ejecuta:
+
+git clone [https://github.com/tu_usuario/FinExtract.git](https://github.com/tu_usuario/FinExtract.git)
+cd FinExtract
+
+2. Preparar las Carpetas de Datos y Salida
+Dentro del directorio extractors_sft/, asegúrate de que existan las carpetas data/ y output/. Estas se usarán para los PDFs de entrada y los archivos de salida generados.
+
+cd extractors_sft
+mkdir data
+mkdir output
+cd .. # Volver a la raíz del proyecto
