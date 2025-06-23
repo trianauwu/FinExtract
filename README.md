@@ -84,6 +84,7 @@ a. Para el Microservicio de Henderson (henderson_microservice)
 #### 2. Crear el entorno virtual:
 
 ```python -m venv venv```
+
 #### 3. Activar el entorno virtual:
 
 ``` # En Windows (CMD/PowerShell):
@@ -91,43 +92,41 @@ a. Para el Microservicio de Henderson (henderson_microservice)
 ```
 #### 4. Instalar dependencias:
 
-```pip install -r requirements.txt
-```
+```pip install -r requirements.txt```
+
 #### 5. Desactivar el entorno virtual:
 
-```deactivate
-```
+```deactivate```
+
 #### Volver a la raíz del proyecto:
 
-```cd ..
-```
+```cd ..```
+
 b. Para los Servicios de Extracción SFT (extractors_sft, incluyendo GUI/Main/Local Processor)
 #### 1. Navegar al directorio:
 
-```cd extractors_sft
-```
+```cd extractors_sft```
 
 #### 2. Crear el entorno virtual:
 
-```python -m venv venv
-```
+```python -m venv venv```
+
 #### 3. Activar el entorno virtual:
 
 ```# En Windows (CMD/PowerShell):
-.\venv\Scripts\activate.bat
-```
+.\venv\Scripts\activate.bat```
+
 #### 4. Instalar dependencias:
 
-```pip install -r requirements.txt
-```
+```pip install -r requirements.txt```
+
 #### 5. Desactivar el entorno virtual:
 
-```deactivate
-```
+```deactivate```
+
 #### 6. Volver a la raíz del proyecto:
 
-```cd ..
-```
+```cd ..```
 
 ## 4. Instalar y Configurar Servicios Externos
 ### a. RabbitMQ
