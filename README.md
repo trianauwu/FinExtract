@@ -1,4 +1,4 @@
-# FinExtract – Sistema de Procesamiento de Documentos PDF
+# FinExtract – Sistema de Procesamiento de Documentos 
 
 **Autores:** Marina Ramos, Mikela Scotti, Arturo Cornes, Erika Puhl y Triana Correa 
 
