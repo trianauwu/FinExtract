@@ -74,10 +74,11 @@ Abre tu terminal (PowerShell o CMD) y ejecuta:
 git clone [https://github.com/tu_usuario/FinExtract.git](https://github.com/tu_usuario/FinExtract.git)
 cd FinExtract
 ```
-
+### 2. Preparar las Carpetas de Datos y Salida
 Dentro del directorio extractors_sft/, asegúrate de que existan las carpetas data/ y output/. Estas se usarán para los PDFs de entrada y los archivos de salida generados.
 
-cd extractors_sft
+```cd extractors_sft
 mkdir data
 mkdir output
 cd .. # Volver a la raíz del proyecto
+```
