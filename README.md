@@ -2,8 +2,6 @@
 
 **Autores:** Marina Ramos, Mikela Scotti, Arturo Cornes, Erika Puhl y Triana Correa 
 
-**Versión:** 2.0 (Local-First)
-
 ## ✨ Visión General del Proyecto
 
 FinExtract es una robusta aplicación de escritorio diseñada para automatizar la extracción, transformación, validación y reporte de datos financieros de documentos PDF de diversos proveedores. Su objetivo principal es optimizar la gestión de datos, reducir la carga de trabajo manual y garantizar la precisión en el procesamiento de información crítica para Grupo Cepas.
