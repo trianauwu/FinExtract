@@ -114,7 +114,8 @@ b. Para los Servicios de Extracción SFT (extractors_sft, incluyendo GUI/Main/Lo
 #### 3. Activar el entorno virtual:
 
 ```# En Windows (CMD/PowerShell):
-.\venv\Scripts\activate.bat```
+.\venv\Scripts\activate.bat
+```
 
 #### 4. Instalar dependencias:
 
