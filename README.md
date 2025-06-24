@@ -255,10 +255,10 @@ python GUI\gui.py
 
 Con todos los servicios ejecutándose:
 
-RabbitMQ Management: http://localhost:15672 (user: guest, pass: guest)
-Prometheus UI: http://localhost:9090 (Verifica "Status" -> "Targets" para asegurar que todos tus servicios estén "UP").
-Grafana UI: http://localhost:3000
-Aplicación FinExtract GUI: Utiliza la ventana de la GUI para seleccionar y procesar tus PDFs. Observa los logs en las terminales para ver el flujo de trabajo.
+-RabbitMQ Management: http://localhost:15672 (user: guest, pass: guest)
+-Prometheus UI: http://localhost:9090 (Verifica "Status" -> "Targets" para asegurar que todos tus servicios estén "UP").
+-Grafana UI: http://localhost:3000
+-Aplicación FinExtract GUI: Utiliza la ventana de la GUI para seleccionar y procesar tus PDFs. Observa los logs en las terminales para ver el flujo de trabajo.
 
 
 
